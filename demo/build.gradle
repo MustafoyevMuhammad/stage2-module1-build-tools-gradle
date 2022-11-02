@@ -5,7 +5,7 @@ plugins{
 
 }
 dependencies {
-    implementation(':utils')
+    implementation project(':utils')
 }
 
 repositories {

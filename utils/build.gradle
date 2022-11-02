@@ -24,6 +24,7 @@ publishing {
             artifactId  = project.name
             version = project.version
 
+
 // provide groupId
 // provide artifactId
 // provide version
@@ -35,13 +36,16 @@ publishing {
 
 //add Apache Apache Commons Lang 3.10 (or higher) dependency
 dependencies {
-    implementation(group: 'org.apache.commons', name: 'commons-lang', version: '3.10' )
+    implementation(group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0' )
+    //group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
 }
 
 jar {
     manifest {
-        attributes 'StringUtils': 'com.epam.utils'
-        attributes 'Utils':'com.epam.demo'
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': project.version)
+//        attributes 'StringUtils': 'com.epam.utils'
+//        attributes 'Utils':'com.epam.demo'
         //attributes 'Main-Class': 'com.example.main.Application'
         //provide manifest with such attributes as
         // 'Implementation-Title', 'Implementation-Version'
