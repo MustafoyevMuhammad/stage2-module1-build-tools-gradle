@@ -12,11 +12,13 @@ public class Utils {
         for (String str : args) {
             try {
                 result = result && decimalFormat.parse(str).doubleValue() > 0;
-            } catch (ParseException e) {
+            } catch (Exception e) {
                 return false;
             }
         }
         return result;
 
     }
+
+
 }

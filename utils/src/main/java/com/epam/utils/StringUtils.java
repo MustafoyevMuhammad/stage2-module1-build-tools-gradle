@@ -8,7 +8,7 @@ public class StringUtils {
         DecimalFormat decimalFormat = new DecimalFormat("#.000");
         try {
             return decimalFormat.parse(str).doubleValue() % 2 == 0;
-        } catch (ParseException e) {
+        } catch (Exception e) {
             return false;
         }
     }
