@@ -1,15 +1,12 @@
 package com.epam.utils;
 
+import org.apache.commons.lang3.math.NumberUtils;
+
 import java.text.DecimalFormat;
 import java.text.ParseException;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
-        DecimalFormat decimalFormat = new DecimalFormat("#.000");
-        try {
-            return decimalFormat.parse(str).doubleValue() > 0;
-        } catch (Exception e) {
-            return false;
-        }
+        return NumberUtils.toDouble(str) % 2 == 0.0;
     }
 }
