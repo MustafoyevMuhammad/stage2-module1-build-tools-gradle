@@ -7,6 +7,11 @@ import java.text.ParseException;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
-        return NumberUtils.toDouble(str) % 2 == 0.0;
+        try {
+            return NumberUtils.toInt(str) % 2 == 0.0;
+        }
+        catch (Exception e){
+            return false;
+        }
     }
 }
